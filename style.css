@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.box-degrade{
+    width: 100%;
+    padding: 300px 0;
+    display: flex; /* Torna o contêiner flex */
+    flex-direction: column; /* Organiza os filhos na vertical */
+    align-items: center; /* Alinha os filhos no centro horizontalmente */
+    justify-content: center; /*Centraliza os filhos no eixo vertical*/
+    background-image: linear-gradient(to left,rgb(0, 110, 0), rgb(0, 58, 0), black);
+    background-size: 500% 100%;
+    animation: degrade-animado 5s infinite alternate;
+}
+
+.btn-chutar{
+    color: rgb(0, 0, 0);
+    border: 30%;
+    border-color:rgb(255, 255, 255);
+    background-color: rgb(153, 153, 153);
+    padding: 10px 12px;
+    font-size: 16px;
+    border-radius: 20%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-chutar:hover{
+    background-color: #45a049;
+    transform: scale(1.08); 
+}
+
+.btn-active{
+    transform: scale(0.95);
+    background-color: #397d39;
+}
+
+label, input, button, p {
+    display: block; /* Coloca os elementos um embaixo do outro */
+    margin: 10px 0; /* Espaçamento entre os elementos */
+}
+
+@keyframes degrade-animado {
+    0%{
+        background-position: 0%
+    }
+    100%{
+        background-position: 100%;
+    }
+}
